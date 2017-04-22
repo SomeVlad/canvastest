@@ -1,0 +1,64 @@
+body {
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+}
+
+#controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#popup {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: -400px;
+    transition: right 0.4s ease-in;
+    border: 1px solid #666;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 10px 30px 10px 20px;
+    font-family: "Helvetica", Arial, sans-serif;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+#popup.shown {
+    right: 10px;
+    transition: right 0.4s ease-out;
+}
+
+#popup .close {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    cursor: pointer;
+    line-height: 10px;
+    font-size: 16px;
+}
+
+#popup ul,
+#popup p {
+    margin-bottom: 5px;
+}
+
+#popup .copy {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#popup .copy a {
+    text-decoration: none;
+    color: black;
+}
